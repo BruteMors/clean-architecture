@@ -1,4 +1,4 @@
-package author
+package entity
 
 type Author struct {
 	UUID    string `json:"uuid,omitempty"`

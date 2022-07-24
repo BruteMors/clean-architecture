@@ -1,12 +1,13 @@
-package author
+package v1
 
 import (
-	"awesomeProject1/internal/adapters/api"
+	"awesomeProject1/internal/backup/adapters/api"
+	"awesomeProject1/internal/backup/adapters/api/author"
 	"github.com/julienschmidt/httprouter"
 )
 
 type handler struct {
-	authorService Service
+	authorService author.Service
 }
 
 func (h *handler) Register(router *httprouter.Router) {
@@ -14,6 +15,6 @@ func (h *handler) Register(router *httprouter.Router) {
 	panic("implement me")
 }
 
-func NewHandler(service Service) api.Handler {
+func NewHandler(service author.Service) api.Handler {
 	return &handler{authorService: service}
 }
